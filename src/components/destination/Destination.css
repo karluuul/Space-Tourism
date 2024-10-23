@@ -1,0 +1,37 @@
+.destBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.planet-details {
+  text-align: center; /* Center the text */
+  padding: 20px; /* Add some padding */
+}
+
+.planet-details img {
+  max-width: 100%; /* Make the image responsive */
+  height: auto;
+}
+
+.dest-navbar {
+  margin-bottom: 20px; /* Add some space below the navbar */
+}
+
+.dest-navlinks li {
+  display: inline; /* Display links inline */
+  margin-right: 15px; /* Space between links */
+}
+
+.dest-navlinks a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Change link color */
+}
+
+.dest-navlinks a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
