@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-import data from "../../data/data.json";
+import data from "../../data.json";
 import destBg from "../../assets/destination/background-destination-desktop.jpg";
 import "./Destination.css";
+import moonImage from "../../assets/destination/image-moon.png";
+import marsImage from "../../assets/destination/image-mars.png";
+import europaImage from "../../assets/destination/image-europa.png";
+import titanImage from "../../assets/destination/image-titan.png";
 
 const Destination = () => {
   const [selectedPlanet, setSelectedPlanet] = useState(data.destinations[0]); 
@@ -9,7 +13,14 @@ const Destination = () => {
   const handlePlanetSelect = (planet) => {
     setSelectedPlanet(planet);
   };
-
+  
+  const imageMap = {
+    Moon: moonImage,
+    Mars: marsImage,
+    Europa: europaImage,
+    Titan: titanImage,
+  };
+  
   return (
     <div className="dest-container">
       <img src={destBg} className="destBg" alt="background" />
@@ -34,7 +45,7 @@ const Destination = () => {
         </div>
         <div className="planet-details">
           <h2>{selectedPlanet.name}</h2>
-          <img src={selectedPlanet.images.webp} alt={selectedPlanet.name} />
+          <img src={imageMap[selectedPlanet.name]} alt={selectedPlanet.name} />
           <p>{selectedPlanet.description}</p>
           <p><strong>Distance:</strong> {selectedPlanet.distance}</p>
           <p><strong>Travel Time:</strong> {selectedPlanet.travel}</p>

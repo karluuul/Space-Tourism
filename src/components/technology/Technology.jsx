@@ -1,8 +1,10 @@
 import React from 'react'
+import techBg from '../../assets/technology/background-technology-desktop.jpg';
 
 const Technology = () => {
   return (
-    <div>
+    <div className='tech-container'>
+      <img src={techBg} />
       
     </div>
   )

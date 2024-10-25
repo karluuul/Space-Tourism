@@ -1,18 +1,48 @@
-.navbar {
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 50px;
+  width: 100%;
+  padding: 10px 0px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.logo {
+  margin-right: auto;
+  margin-left: 50px;
+  margin-top: 20px;
 }
 
 .logo img {
   height: 50px;
 }
 
+.divider {
+  width: 50%;
+  height: 1px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.navbar {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 20px 50px;
+  backdrop-filter: blur(40px);
+  box-sizing: border-box;
+  position: relative;
+}
+
 .nav-links ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 70px;
+}
+
+.nav-links ul li {
+  position: relative;
 }
 
 .nav-links ul li a {
@@ -20,15 +50,30 @@
   color: white;
   font-size: 18px;
   text-transform: uppercase;
-  letter-spacing: 0px;
-  line-height: normal;
+  position: relative;
+  padding-bottom: 5px;
+  
 }
 
-.nav-links ul li a:hover {
-  border-bottom: 2px solid white;
+.nav-links ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
 }
 
-.bold-number{
-  font-weight: bolder;
+.nav-links ul li a:hover::after {
+  transform: scaleX(1.1); 
+  transform-origin: left; 
+}
+
+.bold-number {
+  font-weight: bolder; 
   margin-right: 8px;
 }
