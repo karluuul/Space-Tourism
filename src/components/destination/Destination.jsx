@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import data from "../../data/data.json";
+import data from "../../data.json";
 import destBg from "../../assets/destination/background-destination-desktop.jpg";
 import "./Destination.css";
 import moonImage from "../../assets/destination/image-moon.png";
